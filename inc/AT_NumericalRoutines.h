@@ -46,7 +46,6 @@
 	#include <malloc.h>
 #endif
 
-#include "gsl/gsl_math.h"
 
 
 /**
