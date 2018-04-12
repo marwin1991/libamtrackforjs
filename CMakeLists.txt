@@ -2,8 +2,21 @@ cmake_minimum_required(VERSION 3.10)
 project(libamtrackforjs C)
 
 set(CMAKE_C_STANDARD 99)
-add_library(at STATIC src/AT.c src/AT_Constants.c src/AT_DataMaterial.c src/AT_DataParticle.c src/AT_Error.c
-        src/AT_Histograms.c src/AT_NumericalRoutines.c src/AT_SPC.c src/AT_StoppingPowerDataFromFile.c
+add_library(at STATIC
+        src/AT.c
+        src/AT_Constants.c
+        src/AT_DataMaterial.c
+        src/AT_DataParticle.c
+        src/AT_Error.c
+        src/AT_Histograms.c
+        src/AT_NumericalRoutines.c
+        src/AT_PhysicsRoutines.c
+        src/AT_SPC.c
+        src/AT_StoppingPower.c
+        src/AT_StoppingPowerData.c
+        src/AT_StoppingPowerDataBethe.c
+        src/AT_StoppingPowerDataPSTAR.c
+        src/AT_StoppingPowerDataFromFile.c
         src/AT_StoppingPowerDataICRU.c)
 
 #[[
