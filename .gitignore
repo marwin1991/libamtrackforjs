@@ -1,0 +1,6 @@
+_build/
+cmake-build-debug/
+gsl/
+*.idea
+.idea/
+.git/
