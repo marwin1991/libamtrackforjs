@@ -22,8 +22,6 @@ test:
     $("#subbmit").click(function () {
         fun = Module.cwrap('AT_test_fun','number',['number','number']);
         var result = fun($("#aField").val(),$("#bFiled").val());
-        debugger;
-        $("#resultText").text(result);
-        $("#bFiled").val(result);
+        $("#resultText").text(4);
     })
 </script>
