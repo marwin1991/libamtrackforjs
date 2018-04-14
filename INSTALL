@@ -1,0 +1,15 @@
+1. Download Emescripten and install according to the steps from:
+http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html
+
+2. Modify run.sh
+Path to your bash you can get using command: which bash
+Change paths for ./emcmake ./emmake ./emcc to your onw paths
+
+3. Permission
+chmod +x run.sh
+
+4. Run
+./run.sh
+
+4. To clean use:
+sudo rm -r _build

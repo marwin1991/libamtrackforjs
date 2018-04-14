@@ -127,10 +127,6 @@ int getERName(
 }
 
 
-double AT_ER_AM_RadDiff_range_g_cm2( const double E_MeV_u){
-    return AT_r_max_RadicalDiffusion_m(E_MeV_u);
-}
-
 
 void AT_max_electron_ranges_m( const long  number_of_particles,
     const double  E_MeV_u[],
@@ -208,7 +204,7 @@ void AT_max_electron_ranges_m( const long  number_of_particles,
         max_electron_range_g_cm2  =  AT_ER_Tabata_range_g_cm2(beta[i], a1_g_cm2, a2, a3, a4, a5);
         break;
       case ER_AM_RadDiff :
-        max_electron_range_g_cm2  =  AT_ER_AM_RadDiff_range_g_cm2(E_MeV_u[i]);
+        max_electron_range_g_cm2  =  0;
         break;
       default:
         max_electron_range_g_cm2  =  E_MeV_u[i]; /* ER model Test, echoing E_MeV_u */
@@ -287,7 +283,7 @@ double AT_max_electron_range_m(  const double E_MeV_u,
       max_electron_range_g_cm2  =  AT_ER_Tabata_range_g_cm2(beta, a1_g_cm2, a2, a3, a4, a5);
       break;
     case ER_AM_RadDiff :
-      max_electron_range_g_cm2  =  AT_ER_AM_RadDiff_range_g_cm2(E_MeV_u);
+      max_electron_range_g_cm2  =  0;
       break;
     default:
       max_electron_range_g_cm2  =  E_MeV_u; /* ER model Test, echoing E_MeV_u */

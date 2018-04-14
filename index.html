@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ hello libamtrack
+test:
+ <form>
+     a: <input type="text" id="aFiled"><br>
+     b: <input type="text" id="bFiled"><br>
+     <input type="submit" value="Submit" id="subbmit">
+ </form>
+<div id="resultText"></div>
+</body>
+</html>
+
+<script language="text/javaScript" src="libat.js"></script>
+<script language="text/javaScript" src="jquery/jquery-3.3.1.min.js"></script>
+<script language="text/javaScript">
+    $("#subbmit").click(function () {
+        fun = Module.cwrap('AT_test_fun','number',['number','number'])
+        var result = fun($("#aField").val(),$("#bFiled").val())
+        $("#resultText").text(result)
+    })
+</script>

@@ -7,6 +7,7 @@ add_library(at STATIC
         src/AT_Constants.c
         src/AT_DataMaterial.c
         src/AT_DataParticle.c
+        src/AT_ElectronRange.c
         src/AT_Error.c
         src/AT_Histograms.c
         src/AT_NumericalRoutines.c

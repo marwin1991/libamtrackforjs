@@ -40,6 +40,8 @@
 #include "AT_Error.h"
 
 
+
+
 /**
  * Electron range models code numbers
  */
@@ -190,7 +192,7 @@ double AT_ER_Scholz_new_range_g_cm2( double E_MeV_u );
  * @param[in] E_MeV_u
  * @return
  */
-double AT_ER_AM_RadDiff_range_g_cm2( double E_MeV_u );
+//double AT_ER_AM_RadDiff_range_g_cm2( double E_MeV_u );
 
 
 /**
