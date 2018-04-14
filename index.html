@@ -10,21 +10,20 @@ test:
  <form>
      a: <input type="text" id="aFiled"><br>
      b: <input type="text" id="bFiled"><br>
-     <input type="submit" value="Submit" id="submita">
+     <input onclick="aaa()" type="submit" value="Submit" id="submita">
  </form>
 <div id="resultText"></div>
 </body>
 </html>
 
-<script language="text/javaScript" src="libat.js"></script>
+<script language="text/javascript" src="libat.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script language="text/javaScript">
-    $("#submita").click(function () {
-        fun = Module.cwrap('AT_test_fun','number',['number','number']);
-        var result = fun($("#aField").val(),$("#bFiled").val());
-        $("#resultText").html(result);
-    });
-    $("#aFiled").onchange(function () {
-        $("#bFiled").val(2)
-    }).trigger('change');
+<script language="text/javascript">
+    function aaa() {
+        fun = Module.cwrap('AT_test_fun', 'number', ['number', 'number']);
+        const a = document.getElementById('aFiled').value;
+        const b = document.getElementById('bFiled').value;
+        const result = fun(a, b);
+        document.getElementById("resultText").innerHTML = result;
+    }
 </script>
