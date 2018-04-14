@@ -20,9 +20,10 @@ test:
 <script language="text/javaScript" src="jquery/jquery-3.3.1.min.js"></script>
 <script language="text/javaScript">
     $("#subbmit").click(function () {
-        fun = Module.cwrap('AT_test_fun','number',['number','number'])
-        var result = fun($("#aField").val(),$("#bFiled").val())
-        $("#resultText").text(result)
-        $("#bFiled").val(result)
+        fun = Module.cwrap('AT_test_fun','number',['number','number']);
+        var result = fun($("#aField").val(),$("#bFiled").val());
+        debugger;
+        $("#resultText").text(result);
+        $("#bFiled").val(result);
     })
 </script>
