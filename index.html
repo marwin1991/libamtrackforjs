@@ -7,9 +7,11 @@
 <body>
  hello libamtrack
 test:
+ <form>
      a: <input type="text" id="aFiled"><br>
      b: <input type="text" id="bFiled"><br>
-     <input type="submit" value="Submit" id="submit">
+     <input type="submit" value="Submit" id="submita">
+ </form>
 <div id="resultText"></div>
 </body>
 </html>
@@ -17,7 +19,7 @@ test:
 <script language="text/javaScript" src="libat.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script language="text/javaScript">
-    $("#submit").click(function () {
+    $("#submita").click(function () {
         fun = Module.cwrap('AT_test_fun','number',['number','number']);
         var result = fun($("#aField").val(),$("#bFiled").val());
         $("#resultText").html(result);
