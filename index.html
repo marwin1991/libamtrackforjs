@@ -24,4 +24,7 @@ test:
         var result = fun($("#aField").val(),$("#bFiled").val());
         $("#resultText").html(result);
     });
+    $("#aFiled").onchange(function () {
+        $("#bFiled").val(2)
+    }).trigger('change');
 </script>
