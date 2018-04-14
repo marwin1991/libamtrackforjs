@@ -5,20 +5,15 @@
     <title>Title</title>
 </head>
 <body>
- hello libamtrack
-test:
- <form>
      a: <input type="text" id="aFiled"><br>
      b: <input type="text" id="bFiled"><br>
      <input onclick="aaa()" type="submit" value="Submit" id="submita">
- </form>
 <div id="resultText"></div>
 </body>
 </html>
 
-<script language="text/javascript" src="libat.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script language="text/javascript">
+<script src="libat.js"></script>
+<script>
     function aaa() {
         fun = Module.cwrap('AT_test_fun', 'number', ['number', 'number']);
         const a = document.getElementById('aFiled').value;
