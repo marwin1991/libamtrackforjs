@@ -23,5 +23,6 @@ test:
         fun = Module.cwrap('AT_test_fun','number',['number','number'])
         var result = fun($("#aField").val(),$("#bFiled").val())
         $("#resultText").text(result)
+        $("#bFiled").val(result)
     })
 </script>
