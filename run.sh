@@ -237,11 +237,11 @@ funs+='"_AT_FromFile_wrapper",'
 funs+='"_AT_ICRU_wrapper",' 
 
 #----AT_StoppingPowerDataPSTAR.h
-funs+='"_AT_PSTAR_wrapper",' 
+funs+='"_AT_PSTAR_wrapper"'
 
 funs+=']'
 
-"$emcc" libat.a -o libat.js -s EXPORTED_FUNCTIONS="$funs" \
+"$emcc" -O3 libat.a -o libat.js -s EXPORTED_FUNCTIONS="$funs" \
 -s EXTRA_EXPORTED_RUNTIME_METHODS='["ccall", "cwrap"]'
 
 rm ../libat.js

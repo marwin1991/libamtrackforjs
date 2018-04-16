@@ -13,12 +13,19 @@
 </html>
 
 <script src="libat.js"></script>
+<script src="js/AT_E_from_beta.js"></script>
 <script>
     function aaa() {
-        fun = Module.cwrap('AT_test_fun', 'number', ['number', 'number']);
         const a = document.getElementById('aFiled').value;
         const b = document.getElementById('bFiled').value;
-        const result = fun(a, b);
+
+        var foo = [];
+
+        for (var i = a; i <= b; i+=0.05) {
+            foo.push(i);
+        }
+
+        const result = AT_E_from_beta(foo);
         document.getElementById("resultText").innerHTML = result;
     }
 </script>
