@@ -5,8 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-     a: <input type="text" id="aFiled"><br>
-     b: <input type="text" id="bFiled"><br>
+     a       : <input type="text" id="aFiled"><br>
+     interval: <input type="text" id="iFiled"><br>
+     b       : <input type="text" id="bFiled"><br>
      <input onclick="aaa()" type="submit" value="Submit" id="submita">
 <div id="resultText"></div>
 </body>
@@ -16,16 +17,21 @@
 <script src="js/AT_E_from_beta.js"></script>
 <script>
     function aaa() {
-        const a = document.getElementById('aFiled').value;
-        const b = document.getElementById('bFiled').value;
+        const a = parseFloat(document.getElementById('aFiled').value);
+        const interval = parseFloat(document.getElementById('iFiled').value);
+        const b = parseFloat(document.getElementById('bFiled').value);
 
         var foo = [];
 
-        for (var i = a; i <= b; i+=0.05) {
+        for (var i = a; i <= b; i+=interval) {
+            console.log(i);
             foo.push(i);
         }
 
         const result = AT_E_from_beta(foo);
-        document.getElementById("resultText").innerHTML = result;
+        result.forEach(function(entry) {
+            console.log(entry);
+        });
+        document.getElementById("resultText").innerHTML = JSON.stringify(result);
     }
 </script>

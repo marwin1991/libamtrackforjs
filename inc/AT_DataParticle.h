@@ -209,7 +209,7 @@ int AT_atomic_weight_from_Z( const long  n,
  * @param[in] particle_no
  * @return Z
  */
- long AT_Z_from_particle_no_single(  const long  particle_no );
+long AT_Z_from_particle_no_single(  const long  particle_no );
 
 
 /**

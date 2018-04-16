@@ -14,21 +14,17 @@
 function AT_E_from_beta(beta) {
     at_e_from_beta_wrap = Module.cwrap('AT_E_from_beta', 'number', ['number', 'array', 'number']);
 
-    var beta = new Float64Array(beta);
-    var uBetaArray = new Uint8Array(beta.buffer);
+    var data= new Float64Array(beta);
+    var nDataBytes = data.length * data.BYTES_PER_ELEMENT;
 
-    var ptr = Module._malloc(beta.length);
-    var statusCode = at_e_from_beta_wrap(beta.length, uBetaArray, ptr);
+    var dataPtr = Module._malloc(nDataBytes);
 
-    var foo = [];
+    var dataHeap = new Uint8Array(Module.HEAPF64.buffer, dataPtr, nDataBytes);
+    dataHeap.set(new Uint8Array(data.buffer));
 
-    for (var i=0; i<v1.length; i++)
-    {
-        var val = Module.getValue(ptr+i*beta.BYTES_PER_ELEMENT, 'double');
-        console.log(val);
-        foo.push(val)
-    }
+    at_e_from_beta_wrap(data.length, new Uint8Array(data.buffer), dataHeap.byteOffset);
+    var result = new Float64Array(dataHeap.buffer, dataHeap.byteOffset, data.length);
 
-    Module._free(ptr, beta.length);
-    return foo;
+    Module._free(dataHeap.byteOffset);
+    return result;
 }
