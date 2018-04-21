@@ -240,12 +240,12 @@ funs+='"_AT_electron_density_cm3_from_element_acronym"'
 
 funs+=']'
 
-"$emcc" libat.a -o libat.js -s WASM=1 -s EXPORTED_FUNCTIONS="$funs" \
+"$emcc" libat.a -o libat.html -s WASM=1 -s EXPORTED_FUNCTIONS="$funs" \
 -s EXTRA_EXPORTED_RUNTIME_METHODS='["ccall", "cwrap"]'
 
-rm ../libat.js
+rm ../libat.html
 rm ../libat.a
 rm ../libat.wasm
 mv libat.a ..
-mv libat.js ..
+mv libat.html ..
 mv libat.wasm ..
