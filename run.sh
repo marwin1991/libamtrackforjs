@@ -246,6 +246,8 @@ funs+=']'
 rm ../libat.html
 rm ../libat.a
 rm ../libat.wasm
+rm ../libat.js
 mv libat.a ..
 mv libat.html ..
 mv libat.wasm ..
+mv libat.js ..
