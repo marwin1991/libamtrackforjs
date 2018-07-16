@@ -50,6 +50,12 @@ int AT_particle_no_from_Z_and_A( const long  n,
   return AT_Success;
 }
 
+int AT_particle_names(const long  n, char* particle_name[]){
+  for(int i = 0; i < n; i++){
+    strcat(particle_name[i], AT_Particle_Data.element_acronym[i]);
+  }
+}
+
  long AT_A_from_particle_no_single(  const long  particle_no ){
   long A = particle_no % 1000;
   if( (1 <= A) && (A <= 300)){

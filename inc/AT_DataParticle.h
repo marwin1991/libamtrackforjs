@@ -158,6 +158,7 @@ static const AT_particle_data_struct AT_Particle_Data = {
     const long  A);
 
 
+
 /**
  * Returns particle index number from given A and Z
  *
@@ -172,6 +173,14 @@ int AT_particle_no_from_Z_and_A( const long  n,
     const long  A[],
     long  particle_no[]);
 
+
+/**
+ * Returns names of particels in order
+ * @param[in]  n                length of arrays
+ * @param[out] particle_name    particle_names (array of size n)
+ * @return     return code
+ */
+int AT_particle_names(const long  n, char* particle_name[]);
 
 /**
  * Calculates mass number A for particle with given code number

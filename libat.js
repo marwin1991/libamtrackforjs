@@ -5924,12 +5924,6 @@ var real__AT_histo_bin_widths = asm["_AT_histo_bin_widths"]; asm["_AT_histo_bin_
   return real__AT_histo_bin_widths.apply(null, arguments);
 };
 
-var real__AT_histo_left_limit = asm["_AT_histo_left_limit"]; asm["_AT_histo_left_limit"] = function() {
-  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
-  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
-  return real__AT_histo_left_limit.apply(null, arguments);
-};
-
 var real__AT_histo_left_limits = asm["_AT_histo_left_limits"]; asm["_AT_histo_left_limits"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
@@ -6228,6 +6222,12 @@ var real__AT_particle_name_from_particle_no_single = asm["_AT_particle_name_from
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
   return real__AT_particle_name_from_particle_no_single.apply(null, arguments);
+};
+
+var real__AT_particle_names = asm["_AT_particle_names"]; asm["_AT_particle_names"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return real__AT_particle_names.apply(null, arguments);
 };
 
 var real__AT_particle_no_from_Z_and_A = asm["_AT_particle_no_from_Z_and_A"]; asm["_AT_particle_no_from_Z_and_A"] = function() {
@@ -6920,10 +6920,6 @@ var _AT_histo_bin_widths = Module["_AT_histo_bin_widths"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
   return Module["asm"]["_AT_histo_bin_widths"].apply(null, arguments) };
-var _AT_histo_left_limit = Module["_AT_histo_left_limit"] = function() {
-  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
-  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
-  return Module["asm"]["_AT_histo_left_limit"].apply(null, arguments) };
 var _AT_histo_left_limits = Module["_AT_histo_left_limits"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
@@ -7124,6 +7120,10 @@ var _AT_particle_name_from_particle_no_single = Module["_AT_particle_name_from_p
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
   return Module["asm"]["_AT_particle_name_from_particle_no_single"].apply(null, arguments) };
+var _AT_particle_names = Module["_AT_particle_names"] = function() {
+  assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
+  assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
+  return Module["asm"]["_AT_particle_names"].apply(null, arguments) };
 var _AT_particle_no_from_Z_and_A = Module["_AT_particle_no_from_Z_and_A"] = function() {
   assert(runtimeInitialized, 'you need to wait for the runtime to be ready (e.g. wait for main() to be called)');
   assert(!runtimeExited, 'the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)');
